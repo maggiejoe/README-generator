@@ -125,8 +125,21 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    return inquirer.prompt( questions() );
+    return inquirer.prompt(questions() );
 };
 
 // Function call to initialize app
-init();
+init()
+    .then(fileData => {
+        return generateMarkdown(fileData);
+    })
+    .then(readmeMD => {
+        return writeToFile('README.md', readmeMD);
+    })
+    .then(writeResponse => {
+        console.log("Your markdown is complete! Check the dist directory for your README.md file");
+    })
+    .catch(err => {
+        console.log(err);
+    });
+    
