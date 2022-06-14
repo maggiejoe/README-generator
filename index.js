@@ -1,12 +1,12 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
+const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt ([
+const questions = [
         // Questions that require validations and are necessary to generate the README file
         {
             type: 'input',
@@ -108,13 +108,12 @@ const questions = () => {
             message: 'Please choose a license for your project.',
             choices: ['MIT', 'Apache license 2.0', 'BSD 3-clause "New" or "Revised" license', 'BSD 2-clause "Simplified" license', 'Mozilla Public License 2.0', 'The Unlicense']
         }
-    ])
-}
+]
    
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+    fs.writeFile(path.join(__dirname, '/examples/', fileName), data, err => {
         if (err) {
             console.log(err)
         } else {
@@ -125,21 +124,22 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    return inquirer.prompt(questions() );
+    return inquirer.prompt(questions);
 };
 
 // Function call to initialize app
 init()
     .then(fileData => {
+        console.log(fileData);
         return generateMarkdown(fileData);
     })
     .then(readmeMD => {
         return writeToFile('README.md', readmeMD);
     })
-    .then(writeResponse => {
-        console.log("Your markdown is complete! Check the dist directory for your README.md file");
-    })
-    .catch(err => {
-        console.log(err);
-    });
+    // .then(writeResponse => {
+    //     console.log("Your markdown is complete! Check the dist directory for your README.md file");
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    // });
     
