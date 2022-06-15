@@ -1,5 +1,5 @@
-# Sample README.md Generator
-  [![Apache License](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-orange)](https://opensource.org/licenses/MPL-2.0)
+# README Generator
+  [![MIT license](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
 
   ## TABLE OF CONTENTS
   * [Description](#description)
@@ -11,28 +11,28 @@
   * [Contact](#contact)
 
   ## DESCRIPTION
-  Testing to see if this generator works with node.js
+  This project is about creating a readme generator that prompts the user from the command line
 
   ## LINKS
   * maggiejoe
-  * maggiejoe
+  * https://github.com/maggiejoe/README-generator.git
 
 
   ## INSTALLATIONS
-  node.js, javascript
+  node.js
 
   ## USAGE
-  n/a
+  
 
   ## CONTRIBUTIONS
-  n/a
+  contact me via email
 
   ## TESTING
-  n/a
+  no tests were preformed for this application
 
   ## CONTACT
   If you have any questions at all, feel free to use my contact info below and I'd be happy to connect with you!
+
+  maggiejoseph94@gmail.com
   
-  maggie@email.com
-  
-  Copyright 2022 by maggie@email.com
+  Copyright 2022 by maggiejoe
