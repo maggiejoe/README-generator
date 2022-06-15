@@ -1,5 +1,4 @@
-# Sample README.md Generator
-  [![Apache License](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-orange)](https://opensource.org/licenses/MPL-2.0)
+# aa
 
   ## TABLE OF CONTENTS
   * [Description](#description)
@@ -11,28 +10,25 @@
   * [Contact](#contact)
 
   ## DESCRIPTION
-  Testing to see if this generator works with node.js
+  aa
 
   ## LINKS
-  * maggiejoe
-  * maggiejoe
+  * aa
+  * aa
 
 
   ## INSTALLATIONS
-  node.js, javascript
+  
 
   ## USAGE
-  n/a
+  
 
   ## CONTRIBUTIONS
-  n/a
+  
 
   ## TESTING
-  n/a
+  
 
   ## CONTACT
   If you have any questions at all, feel free to use my contact info below and I'd be happy to connect with you!
-  
-  maggie@email.com
-  
-  Copyright 2022 by maggie@email.com
+  aa

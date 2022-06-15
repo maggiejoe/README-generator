@@ -7,6 +7,18 @@ function renderLicenseBadge(license) {
   else if (license === 'Apache license 2.0') {
     return '[![Apache License](https://img.shields.io/badge/license-Apache%202.0-lightgreen)](https://opensource.org/licenses/Apache-2.0)'
   }
+  else if (license === 'BSD 3-clause "New" or "Revised" license') {
+    return '[![BSD 3-clause License](https://img.shields.io/badge/license-BSD%203--clause%20%22New%22%20or%20%22Revised%22-yellow)](https://opensource.org/licenses/BSD-3-Clause)'
+  }
+  else if (license === 'BSD 2-clause') {
+    return '[![https://img.shields.io/badge/license-BSD%202--clause%20%22Simplified%22-blueviolet)](https://opensource.org/licenses/BSD-2-Clause)'
+  }
+  else if (license === 'Mozilla Public License 2.0') {
+    return '[![Apache License](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-orange)](https://opensource.org/licenses/MPL-2.0)'
+  }
+  else if (license === 'The Unlicense') {
+    return '[![Apache License](https://img.shields.io/badge/license-The%20Unlicense-red)](https://opensource.org/licenses/unlicense)'
+  }
 }
 
 
@@ -20,22 +32,22 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license, author) {
   if (license === 'MIT') {
-    return '[![MIT license](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)'
+    return `Copyright 2022 by ${author}`
   }
   else if (license === 'Apache license 2.0') {
-    return `Copyright 2022 by ${author}
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
- 
-      http://www.apache.org/licenses/LICENSE-2.0
- 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.`
+    return `Copyright 2022 by ${author}`
+  }
+  else if (license === 'BSD 3-clause "New" or "Revised" license') {
+    return `Copyright 2022 by ${author}`
+  }
+  else if (license === 'BSD 2-clause "Simplified" license') {
+    return `Copyright 2022 by ${author}`
+  }
+  else if (license === 'Mozilla Public License 2.0') {
+    return `Copyright 2022 by ${author}`
+  }
+  else if (license === 'The Unlicense') {
+    return `Copyright 2022 by ${author}`
   }
 }
 
@@ -75,9 +87,10 @@ function generateMarkdown(data) {
 
   ## CONTACT
   If you have any questions at all, feel free to use my contact info below and I'd be happy to connect with you!
+
   ${data.contactInfo}
   
-  ${renderLicenseSection(data.license, data.email)}
+  ${renderLicenseSection(data.license, data.username)}
 `;
 }
 
